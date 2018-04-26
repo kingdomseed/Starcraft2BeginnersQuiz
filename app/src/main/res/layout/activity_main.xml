@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/title_TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_text" />
+
+    <TextView
+        android:id="@+id/subtitle_TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title_TextView"
+        android:text="@string/subtitle_text" />
+
+    <Button
+        android:id="@+id/protoss_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/subtitle_TextView"
+        android:text="@string/protoss_exam_button" />
+
+    <Button
+        android:id="@+id/terran_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/protoss_button"
+        android:text="@string/terran_exam_button" />
+
+    <Button
+        android:id="@+id/zerg_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/terran_button"
+        android:text="@string/zerg_exam_button" />
+
+</RelativeLayout>

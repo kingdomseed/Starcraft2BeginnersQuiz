@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Starcraft 2 Beginners Quiz</string>
+    <string name="title_text">StarCraft 2 Beginner\'s Quiz</string>
+    <string name="subtitle_text">Test your knowledge on unit basics!</string>
+    <string name="protoss_exam_button">Protoss Exam</string>
+    <string name="terran_exam_button">Terran Exam</string>
+    <string name="zerg_exam_button">Zerg Exam</string>
+
+</resources>
