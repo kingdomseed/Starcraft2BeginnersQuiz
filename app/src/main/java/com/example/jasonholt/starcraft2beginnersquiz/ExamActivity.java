@@ -22,17 +22,11 @@ public class ExamActivity extends AppCompatActivity {
         Intent mIntent = getIntent();
         int buttonID = mIntent.getIntExtra("button", 0);
         if (buttonID == 0) {
-            Log.e("OnCreate_Exam", "Something is wrong related to button IDs");
+            Log.e("OnCreate_Exam", "Something is wrong related to button ID assignments/data transfer to this view.");
         } else {
-            if (buttonID == R.id.protoss_button) {
-                loadProtossQuestions();
-            }
-            if (buttonID == R.id.terran_button) {
-                loadTerranQuestions();
-            }
-            if (buttonID == R.id.zerg_button) {
-                loadZergQuestions();
-            }
+            if (buttonID == R.id.protoss_button) loadProtossQuestions();
+            if (buttonID == R.id.terran_button) loadTerranQuestions();
+            if (buttonID == R.id.zerg_button) loadZergQuestions();
         }
     }
 

@@ -1,24 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="protoss_questions">
-        <item name="protoss_question_1">Zealot\'s are strong against which units?</item>
-        <item name="protoss_question_2">Stalker\'s are strong against which units?</item>
-        <item name="protoss_question_3">Adept\'s are strong against which units?</item>
-        <item name="protoss_question_4">Which of these is a cheese move for Protoss?</item>
+        <item name="protoss_question_1">Zealots are strong against which units?</item>
+        <item name="protoss_question_2">Stalkers are strong against which units?</item>
+        <item name="protoss_question_4">Observers have which important attribute?</item>
         <item name="protoss_question_5">What is the resource cost of a single Archon?</item>
     </string-array>
     <string-array name="terran_questions">
-        <item name="protoss_question_1">Zealot\'s are strong against which units?</item>
-        <item name="protoss_question_2">Stalker\'s are strong against which units?</item>
-        <item name="protoss_question_3">Adept\'s are strong against which units?</item>
-        <item name="protoss_question_4">Which of these is a cheese move for Protoss?</item>
-        <item name="protoss_question_5">What is the resource cost of a single Archon?</item>
+        <item name="protoss_question_1">Marines are strong against which units?</item>
+        <item name="protoss_question_4">Which unit offers early detection?</item>
+        <item name="protoss_question_5">What is the resource cost of a single Siege Tank?</item>
     </string-array>
     <string-array name="zerg_questions">
-        <item name="protoss_question_1">Zealot\'s are strong against which units?</item>
-        <item name="protoss_question_2">Stalker\'s are strong against which units?</item>
-        <item name="protoss_question_3">Adept\'s are strong against which units?</item>
-        <item name="protoss_question_4">Which of these is a cheese move for Protoss?</item>
-        <item name="protoss_question_5">What is the resource cost of a single Archon?</item>
+        <item name="protoss_question_1">Zerglings are strong against which units?</item>
+        <item name="protoss_question_2">Roaches are strong against which units?</item>
+        <item name="protoss_question_5">What is the resource cost of a single Queen?</item>
     </string-array>
 </resources>
