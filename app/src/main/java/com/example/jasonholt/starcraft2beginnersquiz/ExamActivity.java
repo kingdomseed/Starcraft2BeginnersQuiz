@@ -5,13 +5,16 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
 public class ExamActivity extends AppCompatActivity {
 
-    private ArrayList<String> questions = new ArrayList<String>();
+    //private ArrayList<String> questions = new ArrayList<String>();
     private Context context = this;
+    private QuestionModel questions;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,21 +25,24 @@ public class ExamActivity extends AppCompatActivity {
         Intent mIntent = getIntent();
         int buttonID = mIntent.getIntExtra("button", 0);
         if (buttonID == 0) {
-            Log.e("OnCreate_Exam", "Something is wrong related to button ID assignments/data transfer to this view.");
+            Log.e("OnCreate_Exam_Activity", "Something is wrong related to button ID assignments/data transfer to this view.");
         } else {
-            if (buttonID == R.id.protoss_button) loadProtossQuestions();
-            if (buttonID == R.id.terran_button) loadTerranQuestions();
-            if (buttonID == R.id.zerg_button) loadZergQuestions();
+            if (buttonID == R.id.protoss_button)
+            {
+                questions = new QuestionModel(R.array.protoss_questions);
+            }
+            /*if (buttonID == R.id.terran_button) loadTerranQuestions();
+            if (buttonID == R.id.zerg_button) loadZergQuestions();*/
         }
     }
 
-    private void loadZergQuestions() {
+/*    private void loadZergQuestions() {
         for (int i = 0; i < getResources().getStringArray(R.array.zerg_questions).length - 1; i++) {
             String question =  context.getResources().getStringArray(R.array.zerg_questions)[i];
             questions.add(question);
         }
 
-        loadNextQuestion();
+        loadLayout();
     }
 
     private void loadTerranQuestions() {
@@ -44,8 +50,7 @@ public class ExamActivity extends AppCompatActivity {
             String question =  context.getResources().getStringArray(R.array.terran_questions)[i];
             questions.add(question);
         }
-
-        loadNextQuestion();
+        loadLayout();
     }
 
     private void loadProtossQuestions() {
@@ -55,11 +60,20 @@ public class ExamActivity extends AppCompatActivity {
             questions.add(question);
         }
 
-        loadNextQuestion();
+        loadLayout();
+    }*/
+
+    private void loadLayout() {
+        LinearLayout linearLayout = new LinearLayout(this);
+        setContentView(linearLayout);
+        linearLayout.setOrientation(LinearLayout.VERTICAL);
+        ArrayList<String> questionsToLoad = questions.getQuestions();
+        for (String question : questionsToLoad) {
+            TextView textView = new TextView(this);
+            textView.setText(question);
+            linearLayout.addView(textView);
+        }
     }
 
-    private void loadNextQuestion() {
 
-
-    }
 }
