@@ -12,9 +12,8 @@ import java.util.ArrayList;
 
 public class ExamActivity extends AppCompatActivity {
 
-    //private ArrayList<String> questions = new ArrayList<String>();
+    private Question questions;
     private Context context = this;
-    private QuestionModel questions;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,48 +26,29 @@ public class ExamActivity extends AppCompatActivity {
         if (buttonID == 0) {
             Log.e("OnCreate_Exam_Activity", "Something is wrong related to button ID assignments/data transfer to this view.");
         } else {
-            if (buttonID == R.id.protoss_button)
-            {
-                questions = new QuestionModel(R.array.protoss_questions);
-            }
-            /*if (buttonID == R.id.terran_button) loadTerranQuestions();
-            if (buttonID == R.id.zerg_button) loadZergQuestions();*/
+            if (buttonID == R.id.protoss_button) loadQuestions(R.array.protoss_questions);
+            if (buttonID == R.id.terran_button) loadQuestions(R.array.zerg_questions);
+            if (buttonID == R.id.zerg_button) loadQuestions(R.array.terran_questions);
         }
     }
 
-/*    private void loadZergQuestions() {
-        for (int i = 0; i < getResources().getStringArray(R.array.zerg_questions).length - 1; i++) {
-            String question =  context.getResources().getStringArray(R.array.zerg_questions)[i];
-            questions.add(question);
-        }
+    private void loadQuestions(int resourceId) {
 
+        ArrayList<String> questionList = new ArrayList<>();
+        for (int i = 0; i < getResources().getStringArray(resourceId).length - 1; i++) {
+            String question =  context.getResources().getStringArray(resourceId)[i];
+            questionList.add(question);
+        }
+        questions = new Question(questionList);
         loadLayout();
     }
 
-    private void loadTerranQuestions() {
-        for (int i = 0; i < getResources().getStringArray(R.array.terran_questions).length - 1; i++) {
-            String question =  context.getResources().getStringArray(R.array.terran_questions)[i];
-            questions.add(question);
-        }
-        loadLayout();
-    }
-
-    private void loadProtossQuestions() {
-
-        for (int i = 0; i < getResources().getStringArray(R.array.protoss_questions).length - 1; i++) {
-            String question =  context.getResources().getStringArray(R.array.protoss_questions)[i];
-            questions.add(question);
-        }
-
-        loadLayout();
-    }*/
 
     private void loadLayout() {
         LinearLayout linearLayout = new LinearLayout(this);
         setContentView(linearLayout);
         linearLayout.setOrientation(LinearLayout.VERTICAL);
-        ArrayList<String> questionsToLoad = questions.getQuestions();
-        for (String question : questionsToLoad) {
+        for (String question : questions.getQuestions()) {
             TextView textView = new TextView(this);
             textView.setText(question);
             linearLayout.addView(textView);
