@@ -1,17 +1,14 @@
 package com.example.jasonholt.starcraft2beginnersquiz;
 
+import android.view.View;
+
 import java.util.ArrayList;
-import android.content.Context;
-import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
-import android.widget.Toast;
 
-
-public class Question {
+public class Questions {
 
     private ArrayList<String> questions;
 
-    public Question(ArrayList<String> questions)
+    public Questions(ArrayList<String> questions)
     {
         this.questions = questions;
     }
@@ -19,10 +16,6 @@ public class Question {
     public ArrayList<String> getQuestions()
     {
         return questions;
-    }
-
-    public void setQuestions(ArrayList<String> questions) {
-        this.questions = questions;
     }
 
     public void addQuestion(String addition)

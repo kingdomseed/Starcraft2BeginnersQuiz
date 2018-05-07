@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+        <array name="protossAnswers_1">
+            <item name="protoss_answer_1">Zealots are strong against Marauders</item>
+            <item name="protoss_answer_2">Zealots are strong against Roaches</item>
+            <item name="protoss_answer_3">Zealots are strong against Zerglings</item>
+        </array>
+        <array name="protossAnswers_2">
+            <item name="protoss_answer_1">Different</item>
+            <item name="protoss_answer_2">Zealots are strong against Marauders</item>
+            <item name="protoss_answer_3">Zealots are strong against Marauders</item>
+        </array>
+        <array name="protossAnswers_3">
+            <item name="protoss_answer_1">Even more</item>
+            <item name="protoss_answer_2">Zealots are strong against Marauders</item>
+            <item name="protoss_answer_3">Zealots are strong against Marauders</item>
+        </array>
+</resources>

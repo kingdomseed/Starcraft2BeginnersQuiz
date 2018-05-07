@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="zerg_question1_answers">
+        <item name="zerg_question_1">Zealots are strong against which units?</item>
+        <item name="zerg_question_2">Stalkers are strong against which units?</item>
+        <item name="zerg_question_4">Observers have which important attribute?</item>
+        <item name="zerg_question_5">What is the resource cost of a single Archon?</item>
+    </string-array>
+    <string-array name="zerg_question2_answers">
+        <item name="zerg_question_1">Marines are strong against which units?</item>
+        <item name="zerg_question_4">Which unit offers early detection?</item>
+        <item name="zerg_question_5">What is the resource cost of a single Siege Tank?</item>
+    </string-array>
+    <string-array name="zerg_question3_answers">
+        <item name="zerg_question_1">Zerglings are strong against which units?</item>
+        <item name="zerg_question_2">Roaches are strong against which units?</item>
+        <item name="zerg_question_5">What is the resource cost of a single Queen?</item>
+    </string-array>
+</resources>
